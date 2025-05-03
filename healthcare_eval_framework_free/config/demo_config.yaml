@@ -1,0 +1,22 @@
+model:
+  provider: dummy
+  name: placeholder
+datasets:
+  - type: medical_qa
+    path: examples/medqa_sample.csv
+metrics:
+  accuracy:
+    intrinsic: [rouge, bertscore]
+  trustworthiness:
+    safety: true
+    bias: true
+  empathy:
+    emotional_support: true
+  performance:
+    latency: true
+    memory: true
+weights:
+  accuracy: 0.5
+  trustworthiness: 0.3
+  empathy: 0.15
+  performance: 0.05
